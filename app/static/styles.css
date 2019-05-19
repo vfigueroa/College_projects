@@ -1,0 +1,64 @@
+nav .navbar
+{
+    color: #6F6F6E;
+}
+
+nav .navbar-brand
+{
+    /* size for brand */
+    font-size: xx-large;
+    background-size:55px, 75px;
+    /*get LS Agenda centered*/
+
+
+}
+
+/* colors for brand */
+nav .navbar-brand .white
+{
+    color: #F7F7F7;
+    text-align: right;
+}
+nav .navbar-brand .blue
+{
+    color: #537fbe;
+    text-align: right;
+}
+nav .navbar-brand .red
+{
+    color: #ea433b;
+    text-align: right;
+}
+
+main .form-control
+{
+    /* center form controls */
+    display: inline-block;
+
+    /* override Bootstrap's 100% width for form controls */
+    width: auto;
+}
+main
+{
+    /* scroll horizontally as needed */
+    overflow-x: auto;
+
+    /* center contents */
+    text-align: center;
+}
+
+main img
+{
+    /* constrain images on small screens */
+    max-width: 100%;
+}
+body
+{
+    background-color: #77C3FF;
+}
+.dropdown-menu {
+  width: 800px;
+}
+.card-group-columns {
+    column-count: 4;
+}

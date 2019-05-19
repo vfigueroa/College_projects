@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+
+        <!-- Required meta tags -->
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+
+        <!-- documentation at http://getbootstrap.com/docs/4.0/, alternative themes at https://bootswatch.com/4-alpha/ -->
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" rel="stylesheet"/>
+
+        <link href="/static/styles.css" rel="stylesheet"/>
+
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+
+        <title>FITNESS: {% block title %}{% endblock %}</title>
+
+    </head>
+
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+          <a class="navbar-brand" href="#">FITNESS ASSISTANT</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+            {% if session.user_id %}
+              <li class="nav-item active">
+                <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                  Menu
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <div class="card-group-columns">
+                    <div class="card">
+                      <img class="card-img-top" src="https://st3.depositphotos.com/4060975/17477/v/1600/depositphotos_174770214-stock-illustration-runner-vector-icon.jpg/40px40/" alt="Card image cap">
+                      <div class="card-img-overlay">
+                        <h5 class="card-title">Cardio</h5>
+                      </div>
+                    </div>
+
+                    <div class="card">
+                      <img class="card-img-top" src="https://st3.depositphotos.com/4060975/17477/v/1600/depositphotos_174770214-stock-illustration-runner-vector-icon.jpg/40px40/" alt="Card image cap">
+                      <div class="card-img-overlay">
+                        <h5 class="card-title">Log Workout</h5>
+                      </div>
+                    </div>
+
+                    <div class="card">
+                      <img class="card-img-top" src="https://st3.depositphotos.com/4060975/17477/v/1600/depositphotos_174770214-stock-illustration-runner-vector-icon.jpg/40px40/" alt="Card image cap">
+                      <div class="card-img-overlay">
+                        <h5 class="card-title">Diagram</h5>
+                      </div>
+                    </div>
+
+                    <div class="card">
+                      <img class="card-img-top" src="https://st3.depositphotos.com/4060975/17477/v/1600/depositphotos_174770214-stock-illustration-runner-vector-icon.jpg/40px40/" alt="Card image cap">
+                      <div class="card-img-overlay">
+                        <h5 class="card-title">Graphs</h5>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <img class="card-img-top" src="https://st3.depositphotos.com/4060975/17477/v/1600/depositphotos_174770214-stock-illustration-runner-vector-icon.jpg/40px40/" alt="Card image cap">
+                      <div class="card-img-overlay">
+                        <h5 class="card-title">Cardio</h5>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <img class="card-img-top" src="https://st3.depositphotos.com/4060975/17477/v/1600/depositphotos_174770214-stock-illustration-runner-vector-icon.jpg/40px40/" alt="Card image cap">
+                      <div class="card-img-overlay">
+                        <h5 class="card-title">Log Workout</h5>
+                      </div>
+                    </div>
+
+                    <div class="card">
+                      <img class="card-img-top" src="https://st3.depositphotos.com/4060975/17477/v/1600/depositphotos_174770214-stock-illustration-runner-vector-icon.jpg/40px40/" alt="Card image cap">
+                      <div class="card-img-overlay">
+                        <h5 class="card-title">Diagram</h5>
+                      </div>
+                    </div>
+
+                    <div class="card">
+                      <img class="card-img-top" src="https://st3.depositphotos.com/4060975/17477/v/1600/depositphotos_174770214-stock-illustration-runner-vector-icon.jpg/40px40/" alt="Card image cap">
+                      <div class="card-img-overlay">
+                        <h5 class="card-title">Graphs</h5>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/about">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" href="#">Help</a>
+              </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+              <input class="form-control mr-sm-2" type="search" placeholder="Search For Exercise" aria-label="Search">
+              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+            <li class="nav-item">
+                <a class="nav-link" href="/logout">Log Out</a>
+            </li>
+            {% else %}
+              <ul class="navbar-nav ml-auto mt-2">
+                <li class="nav-item"><a class="nav-link" href="/register">Register</a></li>
+                <li class="nav-item"><a class="nav-link" href="/login">Log In</a></li>
+              </ul>
+            {% endif %}
+          </div>
+        </nav>
+
+
+        {% if get_flashed_messages() %}
+            <header>
+                <div class="alert alert-primary border text-center" role="alert">
+                    {{ get_flashed_messages() | join(" ") }}
+                </div>
+            </header>
+        {% endif %}
+
+        <main class="container p-5">
+            {% block main %}{% endblock %}
+        </main>
+
+    </body>
+
+</html>

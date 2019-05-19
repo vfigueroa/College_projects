@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+    <style>
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #dddddd;
+    }
+    </style>
+    <h1>Welcome to the greatest fitness app around</h1>
+    <table>
+        <th>class</th>
+        <th>assignment</th>
+        <th>Due date</th>
+        <th>Discription</th>
+        <!--{% for hw in assignments%}
+            <tr>
+                <td>{{hw["class"]}}</td>
+            </tr>
+        {%endfor%}
+    </table>-->
+{% endblock %}
